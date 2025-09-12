@@ -1,0 +1,82 @@
+# questions/010-air-law.yaml
+# Questions Air Law pour Rork
+
+subject:
+  code: "010"
+  name: "Air Law"
+  description: "Questions de réglementation aéronautique"
+
+questions:
+  - id: "010_001"
+    text: "Selon l'OACI, quel est l'âge minimum requis pour obtenir une licence ATPL ?"
+    type: "multiple_choice"
+    options:
+      - "18 ans"
+      - "21 ans"
+      - "23 ans"
+      - "25 ans"
+    correct_answer: 2  # Index 2 = "23 ans"
+    explanation: "Selon l'Annexe 1 de l'OACI, l'âge minimum pour une licence ATPL est de 23 ans."
+    difficulty: "easy"
+    tags: ["OACI", "ATPL", "age", "licence"]
+    
+  - id: "010_002"
+    text: "Dans quel document trouve-t-on les Standards et Pratiques Recommandées (SARP) de l'aviation civile internationale ?"
+    type: "multiple_choice"
+    options:
+      - "Convention de Chicago"
+      - "Annexes OACI"
+      - "Règlements IATA"
+      - "Lois nationales"
+    correct_answer: 1  # Index 1 = "Annexes OACI"
+    explanation: "Les SARP sont contenus dans les 19 Annexes de l'OACI, pas dans la Convention de Chicago qui est le traité fondateur."
+    difficulty: "medium"
+    tags: ["OACI", "SARP", "annexes", "standards"]
+    
+  - id: "010_003"
+    text: "Un aéronef en vol contrôlé perd ses communications radio. Quel code transpondeur doit-il afficher ?"
+    type: "multiple_choice"
+    options:
+      - "7500"
+      - "7600"
+      - "7700"
+      - "2000"
+    correct_answer: 1  # Index 1 = "7600"
+    explanation: "Le code 7600 indique une panne radio. 7500=détournement, 7700=urgence générale, 2000=transpondeur en attente."
+    difficulty: "easy"
+    tags: ["transpondeur", "radio", "panne", "codes"]
+    
+  - id: "010_004"
+    text: "Quelle est la définition d'un 'aérodrome contrôlé' selon l'OACI ?"
+    type: "multiple_choice"
+    options:
+      - "Un aérodrome où le service de contrôle de la circulation aérienne est assuré"
+      - "Un aérodrome avec une tour de contrôle"
+      - "Un aérodrome ouvert au trafic commercial"
+      - "Un aérodrome avec des équipements ILS"
+    correct_answer: 0  # Index 0 = première option
+    explanation: "Un aérodrome contrôlé est défini par la présence d'un service de contrôle ATC, pas seulement par une tour."
+    difficulty: "medium"
+    tags: ["aérodrome", "contrôle", "ATC", "définition"]
+    
+  - id: "010_005"
+    text: "Dans l'espace aérien de classe C, quelles communications sont requises ?"
+    type: "multiple_choice"
+    options:
+      - "Aucune communication requise"
+      - "Communications bilatérales avec l'ATC"
+      - "Écoute uniquement"
+      - "Communications uniquement en cas d'urgence"
+    correct_answer: 1  # Index 1 = "Communications bilatérales"
+    explanation: "Dans l'espace aérien classe C, tous les aéronefs doivent maintenir des communications bilatérales avec l'ATC."
+    difficulty: "medium"
+    tags: ["espace aérien", "classe C", "communications", "ATC"]
+
+metadata:
+  total_questions: 5
+  difficulty_distribution:
+    easy: 2
+    medium: 3
+    hard: 0
+  last_updated: "2024-01-15"
+  source: "chair-flight-adaptation"
