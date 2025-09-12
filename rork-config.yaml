@@ -1,0 +1,109 @@
+# rork-config.yaml - Configuration principale pour l'app ATPL
+
+app:
+  name: "ATPL Study App - Enhanced"
+  description: "Questions ATPL avec contenu Chair-Flight"
+  version: "2.0"
+  type: "quiz_app"
+  icon: "https://raw.githubusercontent.com/votre-username/atpl-questions-rork/main/assets/icon.png"
+
+# Configuration des matières ATPL
+subjects:
+  - code: "010"
+    name: "Air Law"
+    icon: "⚖️"
+    color: "#1e40af"
+    questions_file: "questions/010-air-law.yaml"
+    
+  - code: "020"
+    name: "Aircraft General Knowledge - Airframe"
+    icon: "✈️"
+    color: "#dc2626"
+    questions_file: "questions/020-agk-airframe.yaml"
+    
+  - code: "030"
+    name: "Flight Performance and Planning"
+    icon: "📊"
+    color: "#16a34a"
+    questions_file: "questions/030-flight-performance.yaml"
+    
+  - code: "040"
+    name: "Human Performance and Limitations"
+    icon: "👨‍✈️"
+    color: "#9333ea"
+    questions_file: "questions/040-human-performance.yaml"
+    
+  - code: "050"
+    name: "Meteorology"
+    icon: "🌤️"
+    color: "#0891b2"
+    questions_file: "questions/050-meteorology.yaml"
+    
+  - code: "060"
+    name: "Navigation"
+    icon: "🧭"
+    color: "#c2410c"
+    questions_file: "questions/060-navigation.yaml"
+    
+  - code: "070"
+    name: "Operational Procedures"
+    icon: "📋"
+    color: "#be123c"
+    questions_file: "questions/070-operational-procedures.yaml"
+    
+  - code: "080"
+    name: "Principles of Flight"
+    icon: "🛫"
+    color: "#4338ca"
+    questions_file: "questions/080-principles-of-flight.yaml"
+    
+  - code: "090"
+    name: "Communications"
+    icon: "📡"
+    color: "#059669"
+    questions_file: "questions/090-communications.yaml"
+
+# Interface utilisateur
+ui:
+  theme: "aviation"
+  primary_color: "#1e40af"
+  secondary_color: "#dc2626"
+  
+  home_screen:
+    show_progress: true
+    quick_access: ["010", "040", "080"]
+    
+  quiz_screen:
+    show_timer: true
+    show_progress_bar: true
+    shuffle_questions: true
+    shuffle_answers: true
+
+# Paramètres de quiz
+quiz:
+  default_question_count: 25
+  time_per_question: 45  # secondes
+  passing_score: 75
+  show_explanations: "after_answer"
+  
+  study_modes:
+    - name: "Examen Blanc"
+      question_count: 120
+      time_limit: 150  # minutes
+      all_subjects: true
+      
+    - name: "Par Sujet"
+      question_count: 25
+      time_limit: 30
+      single_subject: true
+      
+    - name: "Révisions Rapides"
+      question_count: 10
+      time_limit: 15
+      mixed_subjects: true
+
+# Analytics
+analytics:
+  track_performance: true
+  show_statistics: true
+  export_results: true
